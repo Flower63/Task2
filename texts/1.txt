@@ -1,4 +1,39 @@
 How to communicate? The telephone perhaps? Do you have a telephone
-in your room at the age of 10? Even so, wherever the phone is you�ll be
-overheard. If your family personal computer is hooked into a phone line, it
-might offer soundless help, but again, it�s not in your room.
+in your room at the age of 10? Even so, wherever the phone is you'll be
+overheard. Bla bla bla. If your family personal computer is hooked into a phone
+line, it might offer soundless help, but again, it's not in your room.
+Bla.
+
+String line = "This order was placed for QT3000!OK?";
+Pattern pattern = Pattern.compile("(.*?)(\\d+)(.*)");
+Matcher matcher = pattern.matcher(line);
+while (matcher.find()) {
+    System.out.println("group 1: " + matcher.group(1));
+    System.out.println("group 2: " + matcher.group(2));
+    System.out.println("group 3: " + matcher.group(3));
+}
+
+И т.д. и т.п. пиво водка сигареты.
+Вестимо.
+
+String line = "This order was placed for QT3000!OK?";
+Pattern pattern = Pattern.compile("(.*?)(\\d+)(.*)");
+Matcher matcher = pattern.matcher(line);
+while (matcher.find()) {
+    System.out.println("group 1: " + matcher.group(1));
+    System.out.println("group 2: " + matcher.group(2));
+    System.out.println("group 3: " + matcher.group(3));
+}
+
+That's the whole case.
+No, it is not. Pair of new sentences! With roar?
+
+Code:
+//put some code
+public class Hello {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    }
+}
+
+And here goes some sentence.

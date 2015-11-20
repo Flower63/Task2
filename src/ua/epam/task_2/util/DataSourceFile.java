@@ -20,7 +20,9 @@ public class DataSourceFile implements DataSource {
 
             while ((temp = reader.readLine()) != null) {
                 result.append(temp);
-                result.append(" ");
+                if (!temp.isEmpty()) {
+                    result.append(" ");
+                }
             }
 
         } catch (FileNotFoundException f) {
