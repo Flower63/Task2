@@ -6,10 +6,16 @@ import java.io.FileReader;
 import java.io.IOException;
 
 /**
- * Created by Dennis on 11/17/2015.
+ * Concrete implementation for DataSource interface.
+ * This data source uses text file to read
+ *
+ * It reads file: /texts/1.txt
+ *
+ * @author Dennis
+ *
+ * on 11/17/2015.
  */
 public class DataSourceFile implements DataSource {
-
     @Override
     public String getText() {
 

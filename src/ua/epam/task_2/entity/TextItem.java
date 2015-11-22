@@ -1,13 +1,24 @@
 package ua.epam.task_2.entity;
 
 /**
- * Created by Dennis
+ * Common super class for all sort of text items
+ *
+ * @author Dennis
  *
  * on 11/19/2015.
  */
 public abstract class TextItem {
+
+    /**
+     * String representation of item
+     */
     String content;
 
+    /**
+     * Constructor
+     *
+     * @param content Item content
+     */
     public TextItem(String content) {
         this.content = content;
     }
@@ -23,7 +34,7 @@ public abstract class TextItem {
 
         TextItem textItem = (TextItem) o;
 
-        return !(getContent() != null ? !getContent().equals(textItem.getContent()) : textItem.getContent() != null);
+        return !(getContent() != null ? !getContent().equalsIgnoreCase(textItem.getContent()) : textItem.getContent() != null);
 
     }
 

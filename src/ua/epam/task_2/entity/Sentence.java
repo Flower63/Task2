@@ -3,22 +3,43 @@ package ua.epam.task_2.entity;
 import java.util.List;
 
 /**
- * Created by Dennis
+ * Entity for sentence
+ *
+ * @author Dennis
  *
  * on 11/17/2015.
  */
 public class Sentence extends TextItem {
+
+    /**
+     * List of words and punctuation marks in sentence
+     */
     private List<TextItem> words;
 
+    /**
+     * Constructor
+     *
+     * @param content String, that represents sentence
+     * @param words List of words and punctuation marks in sentence
+     */
     public Sentence(String content, List<TextItem> words) {
         super(content);
         this.words = words;
     }
 
+    /**
+     * Getter for words
+     */
     public List<TextItem> getWords() {
         return words;
     }
 
+    /**
+     * Method to count entrance of given word in sentence
+     *
+     * @param word Specified word
+     * @return Number of word entrances
+     */
     public int countWords(TextItem word) {
         int count = 0;
 

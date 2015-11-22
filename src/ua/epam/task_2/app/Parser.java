@@ -8,19 +8,37 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by Dennis
+ * Text parser to parse text
+ * and extract its items as objects
+ *
+ * @author Dennis
  *
  * on 11/17/2015.
  */
 public class Parser {
 
-    private SmallTextItemFactory factory = SmallTextItemFactory.getInstance();;
-    private Pattern punctuationPattern = Pattern.compile("##(\\d+)([\\.,\\-:!\\?])");
+    /**
+     * Instance of factory for SmallTextItem's.
+     * Using for words and punctuation marks (which is flyweight)
+     */
+    private SmallTextItemFactory factory = SmallTextItemFactory.getInstance();
+
+    /**
+     * Patterns to parse
+     */
+    private Pattern punctuationPattern = Pattern.compile("##(\\d+)([\\.,;\\-:!\\?])");
     private Pattern codePattern = Pattern.compile("(##\\d+[\\.!\\?]\\s)+(.+?)\\s##(\\d+)[\\.!\\?]");
-    private Pattern sentencesPattern = Pattern.compile("([A-ZА-Я][A-ZА-Яa-zа-я\\d\\s\\.,']*?)[\\.?!]\\s[A-ZА-Я]");
+    private Pattern wordPattern = Pattern.compile("([A-Za-zА-Яа-я']+)[\\.,;\\-\\?\\s:]{0,3}");
+    private Pattern sentencesPattern = Pattern.compile("([A-ZА-Я][^\\{\\}\\+]*?)[\\.?!]\\s[A-ZА-Я]");
     private Pattern lastSentencePattern = Pattern.compile(".*([A-ZА-Я].*?)[\\.\\?!]\\s$");
 
-    public List<TextItem> findSentences(String text) {
+    /**
+     * Extracting sentences from text
+     *
+     * @param text Text to parse
+     * @return Sentences and punctuation marks in list
+     */
+    public List<TextItem> getSentences(String text) {
         Matcher sentencesMatcher = sentencesPattern.matcher(text);
 
         List<TextItem> content = new ArrayList<>();
@@ -74,9 +92,14 @@ public class Parser {
         return content;
     }
 
+    /**
+     * Getting list of words
+     *
+     * @param text Text to extract words
+     * @return List of words and punctuation marks
+     */
     public List<TextItem> getWords(String text) {
         List<TextItem> words = new ArrayList<>();
-        Pattern wordPattern = Pattern.compile("([A-Za-zА-Яа-я']+)[\\.,\\?\\s:]{0,3}");
         Matcher wordMatcher = wordPattern.matcher(text);
 
         /*

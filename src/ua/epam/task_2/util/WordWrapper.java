@@ -3,12 +3,22 @@ package ua.epam.task_2.util;
 import ua.epam.task_2.entity.Word;
 
 /**
- * Created by Dennis
+ * Helper wrapper for word. Needed to sort words by entry
+ *
+ * @author Dennis
  *
  * on 11/20/2015.
  */
-public class WordWrapper implements Comparable {
+public class WordWrapper {
+
+    /**
+     * Content
+     */
     private Word word;
+
+    /**
+     * Counter
+     */
     private int counter;
 
     public WordWrapper(Word word) {
@@ -23,17 +33,7 @@ public class WordWrapper implements Comparable {
         return counter;
     }
 
-    public void increase() {
-        counter++;
-    }
-
     public void setCounter(int counter) {
         this.counter = counter;
-    }
-
-    @Override
-    public int compareTo(Object o) {
-        WordWrapper helper = (WordWrapper) o;
-        return helper.getCounter() - this.getCounter();
     }
 }

@@ -1,8 +1,23 @@
+You're 10 years old. Your best friend lives across the street. In fact,
+the windows of your bedrooms face each other. Every night, after
+your parents have declared bedtime at the usual indecently early
+hour, you still need to exchange thoughts, observations, secrets, gossip, jokes,
+and dreams. No one can blame you. After all, the impulse to communicate
+is one of the most human of traits.
+While the lights are still on in your bedrooms, you and your best friend
+can wave to each other from the windows and, using broad gestures and
+rudimentary body language, convey a thought or two. But sophisticated
+transactions seem difficult. And once the parents have decreed "Lights out!"
+the situation seems hopeless.
 How to communicate? The telephone perhaps? Do you have a telephone
 in your room at the age of 10? Even so, wherever the phone is you'll be
-overheard. Bla bla bla. If your family personal computer is hooked into a phone
-line, it might offer soundless help, but again, it's not in your room.
-Bla.
+overheard. If your family personal computer is hooked into a phone line, it
+might offer soundless help, but again, it's not in your room.
+What you and your best friend do own, however, are flashlights. Everyone
+knows that flashlights were invented to let kids read books under the bed
+covers; flashlights also seem perfect for the job of communicating after dark.
+They're certainly quiet enough, and the light is highly directional and probably
+won't seep out under the bedroom door to alert your suspicious folks.
 
 String line = "This order was placed for QT3000!OK?";
 Pattern pattern = Pattern.compile("(.*?)(\\d+)(.*)");
@@ -13,20 +28,11 @@ while (matcher.find()) {
     System.out.println("group 3: " + matcher.group(3));
 }
 
-И т.д. и т.п. пиво водка сигареты.
-Вестимо.
-
-String line = "This order was placed for QT3000!OK?";
-Pattern pattern = Pattern.compile("(.*?)(\\d+)(.*)");
-Matcher matcher = pattern.matcher(line);
-while (matcher.find()) {
-    System.out.println("group 1: " + matcher.group(1));
-    System.out.println("group 2: " + matcher.group(2));
-    System.out.println("group 3: " + matcher.group(3));
-}
-
-That's the whole case.
-No, it is not. Pair of new sentences! With roar?
+Из-за децентрализованной работы с данными, проводимой в каждом отделе
+независимо от других отделов, в файловой системе фактически допускается бесконтрольное дублирование
+данных, и это, в принципе, неизбежно. Например, на
+рис. 1.3 ясно видно, что в отделе реализации и отделе контрактов дублируется
+информация об объектах недвижимости и арендаторах. Бесконтрольное дублирование данных нежелательно по следующим причинам.
 
 Code:
 //put some code

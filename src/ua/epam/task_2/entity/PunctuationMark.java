@@ -1,7 +1,9 @@
 package ua.epam.task_2.entity;
 
 /**
- * Created by Dennis
+ * Entity for punctuation mark
+ *
+ * @author Dennis
  *
  * on 11/19/2015.
  */

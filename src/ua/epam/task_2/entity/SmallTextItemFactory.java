@@ -6,7 +6,9 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
- * Created by Dennis
+ * Realisation flyweight pattern factory for words and punctuation marks
+ *
+ * @author Dennis
  *
  * on 11/17/2015.
  */
